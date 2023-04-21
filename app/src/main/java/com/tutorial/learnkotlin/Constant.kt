@@ -1,27 +1,30 @@
 package com.tutorial.learnkotlin
 
+import android.content.Context
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.tutorial.learnkotlin.model.Question
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
+
 
 object Constant {
     const val  USER_NAME : String = "user_name"
     const val TotalQuestion : String = "total_question"
     const val  Correct_Answer:String = "correct_answer"
-    fun getQuestion():ArrayList<Question>{
-        val questionList = ArrayList<Question>()
-        val que1 = Question(1,"what country does this flag belong to",R.drawable.ic_flag_of_argentina,"Argentina","France","Belgium","Australia",1)
-        val que2 = Question(2,"what country does this flag belong to",R.drawable.ic_flag_of_argentina,"Argentina","France","Belgium","Australia",1)
-        val que3 = Question(3,"what country does this flag belong to",R.drawable.ic_flag_of_argentina,"Argentina","France","Belgium","Australia",1)
-        val que4 = Question(4,"what country does this flag belong to",R.drawable.ic_flag_of_argentina,"Argentina","France","Belgium","Australia",1)
-        val que5 = Question(5,"what country does this flag belong to",R.drawable.ic_flag_of_argentina,"Argentina","France","Belgium","Australia",1)
-        val que6 = Question(6,"what country does this flag belong to",R.drawable.ic_flag_of_argentina,"Argentina","France","Belgium","Australia",1)
-        val que7 = Question(7,"what country does this flag belong to",R.drawable.ic_flag_of_argentina,"Argentina","France","Belgium","Australia",1)
-        questionList.add(que1)
-        questionList.add(que2)
-        questionList.add(que3)
-        questionList.add(que4)
-        questionList.add(que5)
-        questionList.add(que6)
-        questionList.add(que7)
+    fun getQuestion(context: Context):ArrayList<Question>{
+        val inputStream: InputStream = context.resources.openRawResource(R.raw.quiz)
+        val bufferedReader = BufferedReader(InputStreamReader(inputStream))
+        val jsonStringBuilder = StringBuilder()
+        var line: String? = null
+        while ({ line = bufferedReader.readLine(); line }() != null) {
+            jsonStringBuilder.append(line)
+        }
+        val jsonString = jsonStringBuilder.toString()
+        val gson = Gson()
+        val questionListType = object : TypeToken<ArrayList<Question>>() {}.type
+        val questionList = gson.fromJson<ArrayList<Question>>(jsonString, questionListType)
 
         return questionList
 

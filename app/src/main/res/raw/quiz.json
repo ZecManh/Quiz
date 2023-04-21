@@ -1,0 +1,85 @@
+[
+  {
+    "question": "Trong ngôn ngữ lập trình Kotlin, từ khóa nào được sử dụng để khai báo một biến?",
+    "option1": "val",
+    "option2":"var",
+    "option3":"const",
+    "option4":"let",
+    "answer": "val",
+    "correctAnswer": "1"
+  },
+  {
+    "question": "Trong Kotlin, đối tượng của lớp nào được sử dụng để thực hiện nhập và xuất dữ liệu?",
+    "option1": "Scanner",
+    "option2":"Console",
+    "option3":"Input",
+    "option4":"Output",
+    "answer": "Scanner",
+    "correctAnswer": "1"
+  },
+  {
+    "question": "Trong ngôn ngữ lập trình Python, phép toán nào được sử dụng để tính luỹ thừa?",
+    "option1": "**",
+    "option2": "//",
+    "option3": "%",
+    "option4": "*",
+    "answer": "**",
+    "correctAnswer": "1"
+  },
+  {
+    "question": "Trong Python, để đọc dữ liệu từ một tập tin văn bản, chúng ta sử dụng hàm nào?",
+      "option1": "read()",
+      "option2": "write()",
+      "option3": "open()",
+      "option4": "close()",
+    "answer": "read()",
+    "correctAnswer": "1"
+  },
+  {
+    "question": "Trong Python, hàm nào được sử dụng để đọc dữ liệu từ bàn phím?",
+      "option1": "input()",
+      "option2": "print()",
+      "option3": "scan()",
+      "option4": "readline()",
+    "answer": "input()",
+    "correctAnswer": "1"
+  },
+  {
+    "question": "Trong Python, từ khóa nào được sử dụng để khai báo một biến?",
+      "option1": "let",
+      "option2": "var",
+      "option3": "const",
+      "option4": "None of the above",
+    "answer": "None of the above",
+    "correctAnswer": "4"
+  },
+  {
+    "question": "Trong Python, hàm nào được sử dụng để in dữ liệu ra màn hình?",
+      "option1": "print()",
+      "option2": "input()",
+      "option3": "read()",
+      "option4": "write()",
+
+    "answer": "print()",
+    "correctAnswer": "1"
+  },
+  {
+    "question": "Trong Python, để kiểm tra xem một giá trị có nằm trong một danh sách hay không, chúng ta sử dụng hàm nào?",
+      "option1": "contains()",
+      "option2": "exists()",
+      "option3": "find()",
+      "option4": "in",
+    "answer": "in",
+    "correctAnswer": "4"
+  },
+  {
+    "question": "Trong Python, phạm vi của một biến được khai báo trong hàm là gì?",
+      "option1": "Toàn bộ chương trình",
+      "option2": "Hàm chứa biến đó",
+      "option3": "Khối lệnh chứa biến đó",
+      "option4": "Chỉ có thể truy cập biến đó trong hàm khai báo",
+    "answer": "Chỉ có thể truy cập biến đó trong hàm khai báo",
+    "correctAnswer": "4"
+  }
+]
+

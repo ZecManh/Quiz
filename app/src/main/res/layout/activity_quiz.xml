@@ -16,25 +16,15 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="what country does this flag belong to"
         android:textSize="22sp"/>
-    <ImageView
-        android:id="@+id/img_quiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_flag_of_argentina"
-        app:layout_constraintTop_toBottomOf="@id/tv_question"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"
-        />
     <ProgressBar
         android:id="@+id/pb_quiz"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:max="9"
         android:minHeight="50dp"
-        android:progress="0"
+        android:progress="8"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        app:layout_constraintTop_toBottomOf="@id/img_quiz"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:indeterminate="false"
@@ -45,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0/9"
-        app:layout_constraintTop_toBottomOf="@id/img_quiz"
+        app:layout_constraintTop_toBottomOf="@id/tv_question"
         android:layout_marginTop="55dp"
         app:layout_constraintStart_toEndOf="@id/pb_quiz"
        android:textAlignment="center"
@@ -105,11 +95,4 @@
         android:background="#FFEB3B"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
